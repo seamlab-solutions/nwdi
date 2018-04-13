@@ -1,0 +1,16 @@
+<template>
+  <div class="container">
+    <header>
+      <div>
+        <img src="/images/logo.jpg" id="logo"/>
+      </div>
+      <div>
+        <img src="/images/sgs-eqas.jpg" id="logo"/>
+      </div>
+    </header>
+    <nav>
+      <a repeat.for="route of router.navigation" href.bind="route.href" class="${route.isActive ? 'active' : ''}">${route.title}</a>
+    </nav>
+    <slot name="content"></slot>
+  </div>
+</template>
